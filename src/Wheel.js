@@ -45,7 +45,7 @@ class Wheel extends React.Component{
                     </div>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.playButton}>
-                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725942.png?token=exp=1641732543~hmac=7055c47d50deccdc22f34f9a8974f100" />
+                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725942.png?token=exp=1642434449~hmac=06a2c4110d505bc57be28f4408fef175" />
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ class Wheel extends React.Component{
 
 const styles = {
     wheelContainer : {
-        height : '15rem',
+        height : '14rem',
         width : '100%',
         backgroundColor : 'lightgrey',
     },
