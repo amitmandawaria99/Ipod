@@ -38,9 +38,9 @@ class Wheel extends React.Component{
                     </div>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.middleButtons}>
-                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725947.png?token=exp=1641732489~hmac=d912763ebe564f18f9b379cbc6f698f3" />
+                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725947.png?token=exp=1642432099~hmac=86cf8c662886c8e4ef26f87bef457e51" />
                             <div style={{backgroundColor : 'lightgrey' , width : '5rem' , height : '5rem' , borderRadius : '50%'}}></div>
-                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725916.png?token=exp=1641732426~hmac=d8f94092ebb878cd08fc7ebc07712497" />
+                            <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725916.png?token=exp=1642431762~hmac=88b815d636df7c211c60054055927b16" />
                         </div>
                     </div>
                     <div style = {styles.buttonContainer}>
@@ -56,16 +56,15 @@ class Wheel extends React.Component{
 
 const styles = {
     wheelContainer : {
-        height : '13rem',
-        width : 'inherit',
+        height : '15rem',
+        width : '100%',
         backgroundColor : 'lightgrey',
-        alignSelf : 'flex-end'
     },
     wheel : {
-        width : '15rem',
-        height : 'inherit',
+        width : '80%',
+        height : '90%',
         backgroundColor : 'white',
-        margin : 'auto',
+        margin : '1rem auto',
         borderRadius : '50%',
         display : 'flex',
         flexDirection : 'row',
