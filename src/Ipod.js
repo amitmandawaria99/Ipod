@@ -6,13 +6,12 @@ class Ipod extends React.Component{
     constructor(){
         super();
         this.state = {
-            activeItem : 'Wallpapers'
+            activeItem : 'Wallpapers',
+            activePage : 'Home'
         }
     }
 
-    componentDidUpdate(){
-        console.log("Updated");
-    }
+
     rotateWheel = () => {
         var currentAngle = 15;
         var containerElement = document.getElementById('wheel-container');
@@ -79,24 +78,38 @@ class Ipod extends React.Component{
         });
     }
 
+    changePage = () => {
+
+        this.setState({
+            activeItem : this.state.activeItem,
+            activePage : this.state.activeItem
+        })
+    }
+
+    changePageToHomeScreen = () => {
+        this.setState({
+            activeItem : 'Wallpapers',
+            activePage : 'Home'
+        })
+    }
     render(){
         return(
             <div style = {styles.ipodContainer}>
-                {/* <Screen />
-                <Wheel /> */}
-                 <Screen activeItem={this.state.activeItem}/>
+                
+                <Screen activeItem={this.state.activeItem} activePage={this.state.activePage} />
+
                 <div style = {styles.wheelContainer} id='wheel-container'>
                 <div id='inner-container' style = {styles.wheel} onClick={this.rotateWheel}>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.menuButton}>
-                            <img style = {styles.image} src="https://cdn-icons-png.flaticon.com/512/152/152522.png" />
+                            <img onClick={this.changePageToHomeScreen} style = {styles.image} src="https://cdn-icons-png.flaticon.com/512/152/152522.png" />
                         </div>
 
                     </div>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.middleButtons}>
                             <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725947.png?token=exp=1642432099~hmac=86cf8c662886c8e4ef26f87bef457e51" />
-                            <div style={{backgroundColor : 'lightgrey' , width : '5rem' , height : '5rem' , borderRadius : '50%'}}></div>
+                            <div onClick={this.changePage} style={{backgroundColor : 'lightgrey' , width : '5rem' , height : '5rem' , borderRadius : '50%'}}></div>
                             <img style = {styles.image} src="https://cdn-icons.flaticon.com/png/512/5725/premium/5725916.png?token=exp=1642431762~hmac=88b815d636df7c211c60054055927b16" />
                         </div>
                     </div>
