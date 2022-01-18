@@ -1,6 +1,7 @@
 import React from 'react';
-import Home from './Home'
-import Settings from './Settings'
+import Home from './Home';
+import Settings from './Settings';
+import Games from './Games';
 
 class Screen extends React.Component{
 
