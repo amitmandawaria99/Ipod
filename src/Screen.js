@@ -4,6 +4,7 @@ import Wallpapers from './Wallpapers';
 import Music from './Music';
 import Games from './Games';
 import Settings from './Settings';
+import MyMusic from './MyMusic';
 
 class Screen extends React.Component{
 
@@ -20,7 +21,8 @@ class Screen extends React.Component{
                 {this.props.activePage==='Music'?<Music activeItem={this.props.activeItem}/> : null}
                 {this.props.activePage==='Games'?<Home activeItem={this.props.activeItem}/> : null}
                 {this.props.activePage==='Settings'?<Settings /> : null}
-
+                {this.props.activePage==='MyMusic'?<MyMusic /> : null}
+                
             </div>
         );
     }
