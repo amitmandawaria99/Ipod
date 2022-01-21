@@ -1,5 +1,7 @@
 import React from 'react';
 
+import artistImage from './assets/images/amit.jpeg';
+
 class Artists extends React.Component{
 
     constructor(){
@@ -43,7 +45,9 @@ const styles = {
         height : '65%',
         width : '35%',
         borderRadius : '50%',
-        backgroundImage : `url("https://images.news18.com/ibnlive/uploads/2019/07/Shawn-Mendes-Camila-Cabello.jpg")`,
+        backgroundImage : `url(${artistImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         alignSelf : 'center'
     },
     image : {
