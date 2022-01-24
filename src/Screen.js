@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from './Home';
-import Wallpapers from './Wallpapers';
 import Music from './Music';
 import Games from './Games';
 import Settings from './Settings';
@@ -18,7 +17,6 @@ class Screen extends React.Component{
         return(
             <div style={styles.screen} id='screen-container'>
                 {this.props.activePage==='Home'?<Home activeItem={this.props.activeItem}/> : null}
-                {this.props.activePage==='Wallpapers'?<Wallpapers activeItem={this.props.activeItem}/> : null}
                 {this.props.activePage==='Music'?<Music activeItem={this.props.activeItem}/> : null}
                 {this.props.activePage==='Games'?<Home activeItem={this.props.activeItem}/> : null}
                 {this.props.activePage==='Settings'?<Settings /> : null}
