@@ -14,7 +14,7 @@ class Artists extends React.Component{
             <div style={styles.artistsContainer}>
                 <div style={styles.titleBar}>
                     <p style={{fontWeight:'bold'}}>iPod</p>
-                    <img style={styles.battery} src="https://image.flaticon.com/icons/svg/3103/3103446.svg"></img>
+                    <img style={styles.battery} src="https://cdn-icons.flaticon.com/png/512/2908/premium/2908584.png?token=exp=1643283185~hmac=613354d72a08c97d6ff02dba7c3bcc5d"></img>
                 </div>
 
                 <div style={styles.info}>
