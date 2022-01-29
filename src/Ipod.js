@@ -1,5 +1,4 @@
 import React from 'react';
-// import Wheel from './Wheel';
 import Screen from './Screen';
 import ZingTouch from 'zingtouch';
 import sound from './assets/music/Senorita.mp3'
@@ -16,7 +15,7 @@ class Ipod extends React.Component{
 
 
     rotateWheel = () => {
-
+        console.log("reached in rotatewheel");
         var currentAngle = 15;
         var containerElement = document.getElementById('inner-container');
         var activeRegion =  new ZingTouch.Region(containerElement);
@@ -114,7 +113,7 @@ class Ipod extends React.Component{
     }
 
     changePage = () => {
-
+        console.log("reached in changepage");
         if(this.state.activeItem === 'Music'){
             this.setState({
                 activeItem : 'MyMusic',
@@ -135,7 +134,7 @@ class Ipod extends React.Component{
     }
 
     changePageToHomeScreen = () => {
-        
+        console.log("reached in changepagetohomescreen");
         if(this.state.activeItem === 'MyMusic' || this.state.activeItem === 'Artists'){
             this.setState({
                 activeItem : 'Music',
@@ -151,6 +150,7 @@ class Ipod extends React.Component{
     }
 
     toggle = () =>{
+        console.log("reached in toggle");
         if(this.state.activePage === 'MyMusic'){
             if(this.state.play == true){
                 this.state.audio.pause();
@@ -168,6 +168,7 @@ class Ipod extends React.Component{
     }
 
     componentDidMount(){
+        console.log("reached in componentdidmount");
         let audio = document.getElementsByClassName("audio-element")[0];
         console.log(audio)
         this.setState({
@@ -177,6 +178,7 @@ class Ipod extends React.Component{
     }
 
     render(){
+        console.log("reached in render");
         let play = this.state.play
         return(
             <div style = {styles.ipodContainer}>
@@ -191,10 +193,12 @@ class Ipod extends React.Component{
                 <div id='inner-container' style = {styles.wheel} onMouseOver={this.rotateWheel}>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.menuButton}>
-                        <i onClick={this.changePageToHomeScreen} style = {styles.image} class="fas fa-bars"></i>
+                            <div onClick={this.changePageToHomeScreen} style = {styles.image} ><i class="fas fa-bars"></i></div>
                         </div>
-
+                        
                     </div>
+
+
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.middleButtons}>
                             
@@ -260,7 +264,7 @@ const styles = {
     image: {
         alignSelf : 'center',
         fontSize: '1.5rem',
-        color : 'white'
+        color : 'white',
     },
 }
 
